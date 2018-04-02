@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        第一个数<input type="text" id="a1">
+        </br>
+        第二个数<input type="text" id="a2">
+        </br>
+
+        <input type="button" name="a" value="+" onclick="c('+')" id="a">
+    
+        <input type="button" name="a" value="-" onclick="c('-')" id="a">
+    
+        <input type="button" name="a" value="×" onclick="c('*')" id="a">
+    
+        <input type="button" name="a" value="÷" onclick="c('/')" id="a">
+    <br/>
+
+        <td>结果</td>
+        <input type="text" id="r">
+        </form>
+        <script>
+    function c(obj){
+        var num1,num2,r;
+        num1=parseInt(document.getElementById("a1").value);
+        num2=parseInt(document.getElementById("a2").value);
+        switch(obj){
+            case "+":
+                r=num1+num2;
+            break;
+
+            case "-":
+                r=num1-num2;
+            break;
+
+            case "*":
+                r=num1*num2;
+            break;
+            case "/":
+                if(num2!=0) {
+                    r =num1/num2;
+                }
+                else{
+                    r="除数不能为0，请重新输入!";
+                }
+                break;
+        }
+        document.getElementById("r").value=r;
+    }
+</script>
+
+
+</body>
+</html>
